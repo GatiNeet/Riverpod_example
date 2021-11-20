@@ -1,3 +1,4 @@
+import 'package:riverpod_example/view/provider/changeNotifierProvider.dart';
 import 'package:riverpod_example/view/provider/combinedProviderPage.dart';
 import 'package:riverpod_example/view/provider/futureProvider.dart';
 import 'package:riverpod_example/view/provider/providerView.dart';
@@ -79,6 +80,17 @@ class HomeView extends StatelessWidget {
                 );
               },
               child: const Text("CombinedProvider"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ChangeNotifierProviderPage(),
+                  ),
+                );
+              },
+              child: const Text("ChangeNotifierProvider"),
             ),
           ],
         ),
